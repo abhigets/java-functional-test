@@ -11,9 +11,9 @@ Feature: simple journey
 
   Scenario: Test Quotation creation journey
     Given User is on home page
-    When User click on create a new quotation
-    And User enter quotation title as "My Sodexo"
-    And User enter following set as :
+    When User chooses to create a new quotation
+    And User enter quotation title as "New Sodexo quote"
+    And User enter following voucher set details:
     |Name|Quantity|Denomination|DenominationQuantity|
     |emp1|100     |10          |10                  |
 

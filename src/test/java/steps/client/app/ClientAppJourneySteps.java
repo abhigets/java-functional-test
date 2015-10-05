@@ -1,6 +1,7 @@
 package steps.client.app;
 
 import applications.ClientApp;
+import cucumber.api.PendingException;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
@@ -24,8 +25,8 @@ public class ClientAppJourneySteps extends ClientApp{
         verifyHeader("Dashboard");
     }
 
-    @When("^User click on create a new quotation$")
-    public void User_click_on_create_a_new_quotation() throws Throwable {
+    @When("^User chooses to create a new quotation$")
+    public void User_chooses_to_create_a_new_quotation() throws Throwable {
         clientDashboardPage.clickCreateNewQuotationButton();
     }
 
@@ -34,8 +35,8 @@ public class ClientAppJourneySteps extends ClientApp{
         clientDashboardPage.enterQuotationTitle(quoteTitle);
     }
 
-    @And("^User enter following set as :$")
-    public void User_enter_following_set_as_(List<VoucherSet> voucherSetList) throws Throwable {
+    @And("^User enter following voucher set details:$")
+    public void User_enter_following_voucher_set_details(List<VoucherSet> voucherSetList) throws Throwable {
         int index = 0;
         for( VoucherSet currentVoucher : voucherSetList) {
             clientDashboardPage.enterVoucherSetWith(index, currentVoucher);
@@ -48,4 +49,5 @@ public class ClientAppJourneySteps extends ClientApp{
     public void User_is_on_home_page() throws Throwable {
         clickHomeButton();
     }
+
 }
