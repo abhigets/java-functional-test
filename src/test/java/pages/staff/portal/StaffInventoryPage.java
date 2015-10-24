@@ -2,9 +2,7 @@ package pages.staff.portal;
 
 import domain.staff.portal.DistributionRecipientDetails;
 import pages.BasePage;
-
 import java.util.concurrent.TimeUnit;
-
 import static org.fluentlenium.core.filter.FilterConstructor.*;
 
 public class StaffInventoryPage extends BasePage{
