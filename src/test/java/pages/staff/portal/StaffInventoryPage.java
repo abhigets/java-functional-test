@@ -1,5 +1,6 @@
 package pages.staff.portal;
 
+import domain.staff.portal.DistributionRecipientDetails;
 import pages.BasePage;
 
 import java.util.concurrent.TimeUnit;
@@ -22,6 +23,18 @@ public class StaffInventoryPage extends BasePage{
         clickDistribute();
         selectAllSetToDistribute();
         clickShowRecipientDetails();
+        enterDistributionRecipientsDetails(new DistributionRecipientDetails());
+        clickDistributeViaMail();
+    }
+
+    private void clickDistributeViaMail() {
+        find(".panel-body .btn-primary").get(1).click();
+    }
+
+    private void enterDistributionRecipientsDetails(DistributionRecipientDetails distributionRecipientDetails) {
+        fill(".form-control",withName("name_4_0")).with(distributionRecipientDetails.getName());
+        fill(".form-control",withName("quantity_4_0")).with(distributionRecipientDetails.getQuantity());
+        fill(".form-control",withName("email_4_0")).with(distributionRecipientDetails.getEmail());
     }
 
     private void clickShowRecipientDetails() {

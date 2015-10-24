@@ -23,8 +23,3 @@ Feature: simple journey
     Then User navigates to staff portal
     And Staff approves payment and places order in core pass
     And Staff distributes orders through Inventory
-
-  Scenario: temp
-    Then User navigates to staff portal
-    And Staff distributes orders through Inventory
-
