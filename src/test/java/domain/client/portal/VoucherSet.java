@@ -1,4 +1,4 @@
-package domain.client.app;
+package domain.client.portal;
 
 /**
  * Created by abhi on 10/4/15.
@@ -9,6 +9,12 @@ public class VoucherSet {
     private String denomination;
     private String denominationQuantity;
 
+    public VoucherSet(){
+        name = "New Name";
+        quantity = "2";
+        denomination = "2";
+        denominationQuantity = "2";
+    }
 
     public String getName() {
         return name;
@@ -38,7 +44,8 @@ public class VoucherSet {
         return denominationQuantity;
     }
 
-    public void setDenominationQuantity(String denominationQuantity) {
+    public VoucherSet setDenominationQuantity(String denominationQuantity) {
         this.denominationQuantity = denominationQuantity;
+        return this;
     }
 }

@@ -1,4 +1,4 @@
-package pages.core.app;
+package pages.mobile.core.portal;
 
 import pages.BasePage;
 
