@@ -88,7 +88,7 @@ public class ClientDashboardPage extends BasePage {
         enterTransactionNumber("11111");
         //TO Do : Specify path relatively
         //enterPaymentProof("src/test/resource/images/TransactionProof.jpg");
-        enterPaymentProof("/Users/abhi/Downloads/TransactionProof.jpg");
+        enterPaymentProof("src/test/resource/images/TransactionProof.jpg");
         submitTransationDetails();
     }
 
@@ -102,5 +102,9 @@ public class ClientDashboardPage extends BasePage {
 
     private void enterTransactionNumber(String transactionNo) {
         fill(".description-detail input",withName("transactionDetails")).with(transactionNo);
+    }
+
+    public void selectDeliveryMechanismExtract() {
+        find("#distribution-details .col-md-1>input").get(3).click();
     }
 }

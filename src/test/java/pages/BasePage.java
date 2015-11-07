@@ -16,7 +16,7 @@ public class BasePage extends FluentPage{
         if (browserType.toLowerCase().contains("chrome"))
             driver = new ChromeDriver();
         else if (browserType.toLowerCase().contains("htmlunit"))
-            driver = new HtmlUnitDriver(BrowserVersion.FIREFOX_38);
+            driver = new HtmlUnitDriver(BrowserVersion.FIREFOX_38); //-Dbrowser=htmlunit
         else
             driver = new FirefoxDriver();
     }

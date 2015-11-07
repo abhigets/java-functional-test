@@ -7,6 +7,7 @@ import pages.LoginPage;
 import pages.client.portal.ClientDashboardPage;
 
 public class ClientPortal extends BasePage{
+    public static String recentQuotationName;
     public ClientDashboardPage clientDashboardPage;
     private LoginPage loginPage;
 
