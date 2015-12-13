@@ -49,6 +49,7 @@ public class ClientDashboardPage extends BasePage {
     }
 
     public void selectDeliveryMechanismSmsAndEmail(){
+        waitForElement("#distribution-details .col-md-1>input",3);
         find("#distribution-details .col-md-1>input").get(2).click();
     }
 
@@ -57,6 +58,7 @@ public class ClientDashboardPage extends BasePage {
     }
 
     public void clickRequestForQuote() {
+        waitForElement("#quotation-submit-button", 3);
         click("#quotation-submit-button");
         getDriver().switchTo().alert().accept();
     }
@@ -66,6 +68,7 @@ public class ClientDashboardPage extends BasePage {
     }
 
     public void viewQuotation() {
+        waitForElement(".description-detail>a",3);
         click(".description-detail>a",withText("View"));
     }
 

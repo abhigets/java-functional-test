@@ -7,6 +7,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.htmlunit.HtmlUnitDriver;
 
+import java.util.concurrent.TimeUnit;
+
 public class BasePage extends FluentPage{
     static WebDriver driver;
     static {
@@ -19,6 +21,10 @@ public class BasePage extends FluentPage{
             driver = new HtmlUnitDriver(BrowserVersion.FIREFOX_38); //-Dbrowser=htmlunit
         else
             driver = new FirefoxDriver();
+    }
+
+    public void waitForElement(String elementLocator, int waitTimeInSeconds) {
+        await().atMost(waitTimeInSeconds, TimeUnit.SECONDS).until(elementLocator).areDisplayed();
     }
 
     public BasePage(){
