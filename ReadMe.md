@@ -10,7 +10,7 @@ It support following browsers
 
 corresponding values
 ```sh
-<blank> bydefault it will choose Firefox driver i.e.try to launch actual browser
+<blank> by default it will choose Firefox driver i.e.try to launch actual browser
 headlessFirefox
 headlessChrome
 ```
@@ -18,10 +18,10 @@ headlessChrome
 Following is are the ways one can run automation test.
 
   - Maven command
-  - Through JUnit plugin in Intellig [i.e. IDE] 
+  - Through JUnit plugin in Intellij [i.e. IDE]
   - Cucumber plugin 
 
-Will discuss in detail how we can run test by each method. 
+Will discuss in detail how we can run test by each method.
 
 ##### Maven
 We have used maven as our build tool so that it is easy to integrate it with CI.
@@ -33,12 +33,12 @@ so while passing argument through maven use
 > value = dont specify (firefox) , headlessFirefox , headlessChrome
 
 
-To run test using maven, one can run following commond from root directly. Below shell script will run all the feature file with attribute @all
+To run test using maven, one can run following command from root directly. Below shell script will run all the feature file with attribute @all
 
 ```sh
 $ sh mvn-runner.sh
 ```
-Following command will list all the attribute that one can configure while running tests. So that we can have customize reproting , cutomize our execution and so on . . .
+Following command will list all the attribute that one can configure while running tests. So that we can have customize reporting , customise  our execution and so on . . .
 ```sh
 $ sh list-all-cucumber-option.sh
 ```
@@ -49,11 +49,11 @@ $ sh list-all-cucumber-option.sh
 ##### IDE
 We can run test using IDE as well. Here will consider idea intellij as example. 
 ###### 1. CukeRunner + Junit
-Tool like intellij has bydefault Junit plugin preinstalled. So to run test do following steps
+Tool like intellij has by default Junit plugin pre-installed. So to run test do following steps
 * In project, locate CukesRunner file (src/test/java/CukesRunner.java)
 * Right click 
 * Select Run CukeRunner 
-* [Junit-ide-know-more] : to further customse
+* [Junit-ide-know-more] : to further customise
 
 
 ###### 2. Cucumber Intellij plugin
@@ -78,14 +78,14 @@ Once you run a scenarios using either Junit or cucumber plugin
  * Select 'Edit Configuration'
  * A new window will open 
  * Set VM Option with Dbrowser e.g. -Dbrowser=headlessFirefox
- * [run-edit-configutation-intellij] : refer for more details
+ * [run-edit-configuration-intellij] : refer for more details
   
 
 [//]: # (These are reference links used in the body of this note and get stripped out when the markdown processor does its job. There is no need to format nicely because it shouldn't be seen. Thanks SO - http://stackoverflow.com/questions/4823468/store-comments-in-markdown-syntax)
 
    [Junit-ide-know-more]: <https://github.com/cucumber/cucumber-jvm/wiki/IDE-support>
    [cucumber-plugin-official-site]: <https://plugins.jetbrains.com/plugin/7212?pr=idea>
-   [run-edit-configutation-intellij]:  <https://www.jetbrains.com/idea/help/creating-and-editing-run-debug-configurations.html>
+   [run-edit-configuration-intellij]:  <https://www.jetbrains.com/idea/help/creating-and-editing-run-debug-configurations.html>
    
    
    
