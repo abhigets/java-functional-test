@@ -1,5 +1,8 @@
 Feature: simple journey
 
+  Background: Clean database
+    Given All the quotation, orders and vochers are cleared from DB
+
   @journey1 @all
   Scenario: Create a Quotation with delivery mechanism of SMS and Email
     Given User navigate to client portal

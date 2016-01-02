@@ -4,12 +4,12 @@ import pages.BasePage;
 
 import static org.junit.Assert.assertEquals;
 
-/**
- * Created by abhi on 10/3/15.
- */
 public class MobileCorePortal extends BasePage{
 
+    //Hit the endpoint to clean database
+    protected void cleanQuoteVouchersOrdersFromDB() {
 
+    }
 
     public void verifyHeader(String pageHeader) {
         String actualPageHeader = find(".page-header").getText();
