@@ -1,5 +1,8 @@
 # ReadMe
 
+### Browser version
+While running test on firefox browser (actual browser) one need to have compulsory ***firefox version 36
+
 ### -Dbrowser
 We have implemented a custom argument 'browser'. to customise our test to run on various browser.
 

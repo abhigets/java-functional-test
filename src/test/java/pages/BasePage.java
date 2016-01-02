@@ -15,13 +15,14 @@ public class BasePage extends FluentPage{
         String browserType = System.getProperty("browser");
         if (browserType == null)
             browserType = "firefox";
-        if (browserType.toLowerCase().contains("headlessChrome")) {
+        if (browserType.toLowerCase().contains("headlessChrome".toLowerCase())) {
             driver = new HtmlUnitDriver(BrowserVersion.CHROME);     //-Dbrowser=chrome : headless
         }
-        else if (browserType.toLowerCase().contains("headlessFirefox"))
+        else if (browserType.toLowerCase().contains("headlessFirefox".toLowerCase()))
             driver = new HtmlUnitDriver(BrowserVersion.FIREFOX_38); //-Dbrowser=htmlunit : headless
         else
             driver = new FirefoxDriver();                           // Default firefox : actual browser
+
     }
 
     public void waitForElement(String elementLocator, int waitTimeInSeconds) {
